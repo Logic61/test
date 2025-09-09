@@ -1,6 +1,8 @@
 #include<iostream>
 using namespace std;
 
+//This is only for n*n matrix
+
 double a[12][12];
 double target_vector[12],ans_vector[12];
 int row_number,column_number;
