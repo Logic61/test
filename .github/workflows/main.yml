@@ -1,0 +1,19 @@
+name: Build LaTeX Document
+on: [push] # 只要有推送，就触发云编译
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex # 替换成你的主文件名
+
+      - name: Upload PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: PDF_Output
+          path: main.pdf
