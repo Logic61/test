@@ -18,3 +18,5 @@ jobs:
           name: PDF_Output
           path: main.pdf
           compiler: xelatex
+          latexmk_shell_escape: true
+          args: "-jobname=main -pdf -xelatex -use-make"
