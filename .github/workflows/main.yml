@@ -17,3 +17,4 @@ jobs:
         with:
           name: PDF_Output
           path: main.pdf
+          compiler: xelatex
